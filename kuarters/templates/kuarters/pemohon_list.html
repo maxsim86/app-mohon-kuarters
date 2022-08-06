@@ -1,0 +1,27 @@
+<h1>Senarai Permohonan duduk kuaters</h1>
+
+<ul>
+    {% for pemohon in pemohon_list %}
+
+<li>
+  <a href="/kuarters/pemohon_detail/{{pemohon.id}}">{{ pemohon.nama }} {{pemohon.no_kp}} {{pemohon.jawatan}}</a>
+
+</li>
+
+  <ul>
+<li>
+    <a href="/kuarters/update_pemohon/{{pemohon.id}}">Update Permohonan untuk {{pemohon.nama}} </a>
+</li>
+  </ul>
+
+
+  <ul>
+    <li>
+        <a href="/kuarters/delete_pemohon/{{pemohon.id}}">Delete Permohonan untuk {{pemohon.nama}} </a>
+    </li>
+      </ul>
+        
+
+    {% endfor %}
+</ul>
+   
